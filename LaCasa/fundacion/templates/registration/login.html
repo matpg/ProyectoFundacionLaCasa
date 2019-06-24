@@ -1,0 +1,27 @@
+
+{% extends "fundacion/base.html" %}
+
+{% block content %}
+  
+   
+    <div class="text-center " style="background-color: rgba(76,24,108,0.72); height:705px;">
+        </br></br>          
+        <div class="container">
+            <div class="intro" style="background-color: rgb(247,247,247); height:500px;">
+                </br></br>     
+                <div class="container">
+                </br></br>     
+                <h2 class="text-center"><strong>Iniciar Sesion</strong></h2>
+                </br> </br>  
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p}}
+                    </br> 
+                    <div><button class="btn btn-primary text-center" type="submit" style="background-color: rgb(71,151,244);">Iniciar Sesion</button></div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
