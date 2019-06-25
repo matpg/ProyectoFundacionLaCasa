@@ -4,17 +4,20 @@ import time
 
 class Voluntario(models.Model):
     nombre = models.CharField(max_length=50)
-    email = models.EmailField()
     rut = models.CharField(max_length=11, primary_key=True)
-    edad = models.IntegerField()
-    celular = models.IntegerField()
+    fecha = models.CharField(max_length=50)
+    edad = models.CharField(max_length=50)
+    celular = models.CharField(max_length=50)
     comuna = models.CharField(max_length=50)
-    fecha_nac = models.CharField(max_length=15)
+    email = models.EmailField()
+    """    
     ocupacion = models.CharField(max_length=50)
     nivel_educacion = models.CharField(max_length=50)
     grupo_interes = models.CharField(max_length=50)
-
-    def __str__ (self):
+    """
+    def __str__ (self):       
         return self.nombre
         
+        
 
+   
