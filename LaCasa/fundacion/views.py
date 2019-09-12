@@ -4,6 +4,7 @@ from .forms import VoluntarioForm
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import authenticate, login
+import re 
 
 # Create your views here.
 
@@ -32,6 +33,7 @@ class Crear_Voluntario_view(TemplateView):
                 obj.email = em
                 obj.rut = rut
                 obj.fecha = fecha
+            
                 obj.celular = celu
                 obj.comuna = comuna
                 obj.save()
@@ -57,6 +59,8 @@ def CrearVoluntarioView(request):
             obj.email = em
             obj.rut = rut
             obj.fecha = fecha
+            if re.match('\d',obj.celular):
+                return render(request,'fundacion/crea_error.html', context=None)
             obj.celular = celu
             obj.comuna = comuna
             obj.save()

@@ -27,10 +27,9 @@ SECRET_KEY = 'qfbobq4(tc1pnk--n57y&4+)yve5g-$=g2@k)aes4rpr$lk8vp'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-	'0.0.0.0'
+	'*'
 ]
-
-
+#https://docs.djangoproject.com/es/2.2/topics/class-based-views/
 # Application definition
 
 INSTALLED_APPS = [
