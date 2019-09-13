@@ -1,0 +1,27 @@
+<h1>Voluntario</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Email</th>
+			<th>Address</th>
+			<th>Phone</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for voluntario in object_list %}
+		<tr>
+			<td>{{ voluntario.name }}</td>
+			<td>{{ voluntario.email }}</td>
+			<td>{{ voluntario.address }}</td>
+			<td>
+				<a href="{% url "voluntario_detail"  voluntario.id  %}">details</a>
+				<a href="{% url "voluntario_edit"  voluntario.id  %}">edit</a>
+				<a href="{% url "voluntario_delete"  voluntario.id  %}">delete</a>
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
