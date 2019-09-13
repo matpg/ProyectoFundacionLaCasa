@@ -1,0 +1,33 @@
+
+{% extends "fundacion/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="register-photo" style="background-color: rgba(76,24,108,0.72);">
+        <div class="form-container">
+            
+            {% if user.is_authenticated %}
+            <form method="post" style="background-color: rgb(247,247,247);">
+                {% csrf_token %}
+                <h2 class="text-center"><strong>Registrar Voluntario</strong></h2>
+                <div class="form-group"><input class="form-control" type="text" name="nombre" placeholder="Nombre" style="background-color: rgb(255,255,255);"></div>
+                <div class="form-group"><input class="form-control" type="text" name="apellido" placeholder="Apellido" style="background-color: rgb(255,255,255);"></div>
+                <div class="form-group"><input class="form-control" type="text" name="rut" placeholder="Rut" style="background-color: rgb(255,255,255);"></div>
+
+                
+                <div class="form-group"><input class="form-control" type="text" name="fecha" placeholder="dia/mes/año" style="background-color: rgb(255,255,255);"></div>
+                
+                <a>Celular</a>
+                <div class="form-group"><input class="form-control" type="tel" name="celular" placeholder="Ejemplo: 912345678" style="background-color: rgb(255,255,255);"></div>
+                <div class="form-group"><input class="form-control" type="text" name="comuna" placeholder="Comuna" style="background-color: rgb(255,255,255);"></div>
+                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" style="background-color: rgb(255,255,255);"></div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: rgb(71,151,244);">Registrar</button></div>
+            </form>
+            {% else %}
+                <h2 class="text-center"><strong>No esta autorizado primero debe iniciar sesion</strong></h2>
+                <a class="text-center nav-link" href="{% url 'login' %}">Iniciar Sesion</a>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock content %}
