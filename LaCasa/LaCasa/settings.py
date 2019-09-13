@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fundacion.apps.FundacionConfig',
-    'reset_migrations',
-
 ]
 
 MIDDLEWARE = [

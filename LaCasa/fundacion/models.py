@@ -10,6 +10,7 @@ class Voluntario(models.Model):
     celular = models.CharField(max_length=50)
     comuna = models.CharField(max_length=50)
     email = models.EmailField()
+    fecha_incripcion = models.CharField(max_length=15)
     """    
     ocupacion = models.CharField(max_length=50)
     nivel_educacion = models.CharField(max_length=50)
