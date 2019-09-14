@@ -1,0 +1,302 @@
+[33mcommit 16706e5726dbd21dd352b15221d62bd5d3245da2[m[33m ([m[1;36mHEAD -> [m[1;32mmario[m[33m, [m[1;31morigin/poblets[m[33m, [m[1;31morigin/mario[m[33m)[m
+Merge: d65e554 6c719aa
+Author: m.p.g <m.pobletegarrido@uandresbello.edu>
+Date:   Wed Sep 11 22:21:45 2019 -0300
+
+    cambio linea 32 settings_py
+
+[33mcommit d65e554f2fcc677a188e9d21a5f5b07f106ce7d7[m
+Author: m.p.g <m.pobletegarrido@uandresbello.edu>
+Date:   Wed Sep 11 20:35:21 2019 -0300
+
+    Host local añadido
+
+[33mcommit 0a9958476d6d1be4a3942029fb6336e3aa43994d[m
+Author: m.p.g <m.pobletegarrido@uandresbello.edu>
+Date:   Wed Sep 11 20:30:25 2019 -0300
+
+    Carpeta Borrada
+
+[33mcommit 6c719aa732d1826dd203f569e551a4975814f1ee[m
+Author: marioogr <gonzalez.mario1997@gmail.com>
+Date:   Tue Sep 10 16:27:50 2019 -0300
+
+    Validacion de datos de registro de voluntarios
+
+[33mcommit 444efaebac995fdee268c590b47d4cb5240265ab[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue Sep 10 00:02:26 2019 -0300
+
+    modulo de Sprint 1
+    
+    Modulo de Registro de Voluntarios 0.1 - Primera fase de desarrollo
+
+[33mcommit 3603e4540daa2ee0c419d8bac094dffe27c7c060[m
+Author: demf <demf@outlook.com>
+Date:   Sun Aug 18 23:58:16 2019 -0400
+
+    Movimiento de documentos
+
+[33mcommit f5c149b76de9968efcde628959e23fedabd0a917[m
+Author: demf <demf@outlook.com>
+Date:   Sun Aug 18 23:47:00 2019 -0400
+
+    se cambio los archivos de ubicacion para ordenar los documentos
+
+[33mcommit a7559ed1e93e693f7501343c5ff2e32bb30734fb[m
+Author: victor2411 <49205964+victor2411@users.noreply.github.com>
+Date:   Mon Jun 24 23:58:27 2019 -0400
+
+    virtual environment
+    
+    virtual environment
+
+[33mcommit 53c5eabb5ea7a58ffdea4091e5955b009142edf4[m
+Author: victor2411 <49205964+victor2411@users.noreply.github.com>
+Date:   Mon Jun 24 23:29:57 2019 -0400
+
+    Add files via upload
+
+[33mcommit 64c2b846f35f748ef284c6af9bf2340811968050[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Mon Jun 24 19:34:17 2019 -0400
+
+    Gestión de Voluntarios Web Version 1.0
+    
+    Gestión de Voluntarios y Login Web Version 1.0
+
+[33mcommit d6cad185d354d678131b4776bd5f4b885cffaad1[m
+Author: demf <demf@outlook.com>
+Date:   Wed May 22 23:29:22 2019 -0400
+
+    Add files via upload
+
+[33mcommit e4657fe5a2f166bedd378683f5ab189e564c9469[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue May 14 14:32:50 2019 -0400
+
+    Add files via upload
+
+[33mcommit 2969f252d6de16e472d33256e860605e6ffc1a13[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue May 14 14:32:34 2019 -0400
+
+    Add files via upload
+
+[33mcommit 494cb5ecefab9125c28c0e7aef279fa68e271fd4[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue May 14 14:32:02 2019 -0400
+
+    Add files via upload
+
+[33mcommit 54eeb46233344243e6a485790e12486d6a224d56[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue May 14 14:23:59 2019 -0400
+
+    Delete Modelo de Dominio
+
+[33mcommit cb82b6432ece308d274629de63f5e74c6a2efb72[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue May 14 14:23:47 2019 -0400
+
+    Delete Vista de Desarrollo_ Servicio de Creación de Proyectos
+
+[33mcommit 4ece397a5c3be9ca19db3ac8dbe77200ce5f0385[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue May 14 14:23:29 2019 -0400
+
+    Delete Diagrama de componentes
+
+[33mcommit 46f6c4e781d06dd58f8681ce195739cd0dc9b6d5[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue May 14 14:22:16 2019 -0400
+
+    Add files via upload
+
+[33mcommit 7b7783b3e412cd8b69e6005bb9fd5675414943fe[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue May 14 14:21:52 2019 -0400
+
+    Add files via upload
+
+[33mcommit 25ffb5ae24d0800330151a5edc3ee8a73507d21c[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue May 14 14:21:10 2019 -0400
+
+    Add files via upload
+
+[33mcommit 3f2c752484b0158bedfc0eddde1a64282054bf6f[m
+Author: victor2411 <49205964+victor2411@users.noreply.github.com>
+Date:   Tue May 7 15:34:44 2019 -0400
+
+    Add files via upload
+
+[33mcommit 865b1eb1341064fa330a3de781442f072d830cdd[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue Apr 16 14:35:24 2019 -0400
+
+    Add files via upload
+
+[33mcommit be957685ecd91c7d5cd27d023090cc584e37fe0f[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue Apr 16 14:35:04 2019 -0400
+
+    Delete Presentacion Entrega Software I.pptx
+
+[33mcommit aaabfdae6ee44704de1fa37359e436e7a202a09e[m
+Author: demf <demf@outlook.com>
+Date:   Tue Apr 16 14:23:00 2019 -0400
+
+    Add files via upload
+    
+    poblets
+
+[33mcommit f1a19385d7825ddf18427ec13eaace7238ff5e74[m
+Author: demf <demf@outlook.com>
+Date:   Tue Apr 16 14:17:30 2019 -0400
+
+    Add files via upload
+
+[33mcommit 3fab6c5413646058bc884715a51ab69ed3a19ca3[m
+Author: demf <demf@outlook.com>
+Date:   Tue Apr 16 14:16:35 2019 -0400
+
+    Delete Documento de Visión.docx
+
+[33mcommit 6bc902a911e7895cc41819d5efa6b238c76f03ef[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue Apr 16 14:16:24 2019 -0400
+
+    Set theme jekyll-theme-time-machine
+
+[33mcommit 6f068441c66d209e18e0aacb78bcfe09166ff680[m
+Author: victor2411 <49205964+victor2411@users.noreply.github.com>
+Date:   Tue Apr 9 15:14:01 2019 -0400
+
+    Add files via upload
+
+[33mcommit 762192541ed227016cac14d1d01c62fa0d509abe[m
+Author: victor2411 <49205964+victor2411@users.noreply.github.com>
+Date:   Tue Apr 9 15:13:48 2019 -0400
+
+    Delete Documento de Visión.pdf
+
+[33mcommit 722c421ed725188e7ef059481d437916120e33ba[m
+Author: victor2411 <49205964+victor2411@users.noreply.github.com>
+Date:   Tue Apr 9 14:16:22 2019 -0400
+
+    Add files via upload
+
+[33mcommit 4ff28baa3c0f1851d434e5249a45ecd2c90a485f[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue Apr 2 15:30:54 2019 -0300
+
+    Delete asda.txt
+
+[33mcommit cbb6ac22f18ee50ff92a9c6b420a0bfe19af6828[m
+Author: IDanielCE <49206235+IDanielCE@users.noreply.github.com>
+Date:   Tue Apr 2 15:30:53 2019 -0300
+
+    Delete agagfdda.docx
+
+[33mcommit abeabb1d52dd4c49d042dc5a5d4b83307546cf86[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue Apr 2 15:30:48 2019 -0300
+
+    Delete dfgdfa.txt
+
+[33mcommit 1424c8eb225551c0ea2296d09679390e87d41056[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue Apr 2 15:30:42 2019 -0300
+
+    Delete fagfd.docx
+
+[33mcommit 9178aa927e335b7539d014198167f038a644cc86[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue Apr 2 15:30:37 2019 -0300
+
+    Delete sadfsa.docx
+
+[33mcommit eefcf5c1256dbdbeba168fae0f1fb136e403ef6e[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue Apr 2 15:30:30 2019 -0300
+
+    Delete werwerew.txt
+
+[33mcommit de1133b6ac11a0befb16ffb239d4b2376d872392[m
+Author: IDanielCE <49206235+IDanielCE@users.noreply.github.com>
+Date:   Tue Apr 2 15:29:17 2019 -0300
+
+    Add files via upload
+
+[33mcommit 8f90757142e5f20268d8ee8c7ea8d341863e574d[m
+Author: IDanielCE <49206235+IDanielCE@users.noreply.github.com>
+Date:   Tue Apr 2 15:28:49 2019 -0300
+
+    Add files via upload
+
+[33mcommit 68f0ba254ddbb366b71d91bdcd359c8ad48dfc6f[m
+Author: IDanielCE <49206235+IDanielCE@users.noreply.github.com>
+Date:   Tue Apr 2 15:28:24 2019 -0300
+
+    Add files via upload
+
+[33mcommit 174939aaceb69d5fb9bd506987a80d0f89663bd6[m
+Author: IDanielCE <49206235+IDanielCE@users.noreply.github.com>
+Date:   Tue Apr 2 15:27:44 2019 -0300
+
+    Add files via upload
+
+[33mcommit 7447511f1730b989ff6200e4b53b395b9a7f9687[m
+Author: IDanielCE <49206235+IDanielCE@users.noreply.github.com>
+Date:   Tue Apr 2 15:26:59 2019 -0300
+
+    Add files via upload
+
+[33mcommit 128c0e3a2a859ca70d1ae0df99e6f33f0df50bca[m
+Author: demf <demf@outlook.com>
+Date:   Tue Apr 2 15:23:35 2019 -0300
+
+    Add files via upload
+
+[33mcommit f874d81a377652bcdf9112ce3225bfbbf8fbfa5f[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue Apr 2 15:19:16 2019 -0300
+
+    Delete txt.txt
+
+[33mcommit 31cef55dee864f10ad598a3b1e01835a46e73fdc[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue Apr 2 15:19:09 2019 -0300
+
+    Delete prueba victor.txt
+
+[33mcommit 545aeafea818ca7c929a62d5724a9a4ff09d9e53[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue Apr 2 15:19:02 2019 -0300
+
+    Delete anuel.txt
+
+[33mcommit a6dbe2f19bd65b2646923269d478728243ef1cfb[m
+Author: victor2411 <v.salazarvasquez@uandresbello.edu>
+Date:   Tue Apr 2 15:18:04 2019 -0300
+
+    inicio
+
+[33mcommit 8be7ec5369c2d782c06b3616142f2a4b5051e240[m
+Author: IDanielCE <daniel.caballero1805@gmail.com>
+Date:   Tue Apr 2 15:12:39 2019 -0300
+
+    inicio
+
+[33mcommit 12cea762d564d08cd275db51d94132c9f90178eb[m
+Author: matpg <matpoga@gmail.com>
+Date:   Tue Apr 2 14:56:00 2019 -0300
+
+    inicio
+
+[33mcommit 17f22069e14245dbb347c0c84b7887deccdd2be7[m
+Author: PoBLETS <matpoga@gmail.com>
+Date:   Tue Apr 2 14:35:22 2019 -0300
+
+    Initial commit
