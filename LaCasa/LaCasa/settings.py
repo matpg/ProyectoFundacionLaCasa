@@ -29,7 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = '*'
 
 
-# Application definition
+# Application definition tio maty no se meta aqui
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,9 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fundacion.apps.FundacionConfig',
-    'reset_migrations',
-
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
