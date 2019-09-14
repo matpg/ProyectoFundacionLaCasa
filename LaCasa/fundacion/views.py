@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate, login
 import re 
 from .funciones import CalcularEdadVoluntario
 from datetime import datetime
+from django.shortcuts import get_list_or_404
 
 # Create your views here.
 
@@ -17,10 +18,13 @@ class HomePageView(TemplateView):
 class Exito_vista(TemplateView):
     def get(self, request, **kwards):
         return render (request, 'fundacion/crea_exito.html', context=None)
-def GestionarVoluntario(request):
-    voluntario = Voluntario.objects.all()
-    contexto = {'voluntarios':voluntario}
-    return (request, 'fundacion/gestion_voluntario.html', contexto)
+
+
+def GestionarVoluntarios(request):
+    voluntarios = get_list_or_404(Voluntario)
+    print(voluntarios)
+    return render(request, 'fundacion/gestion_voluntario.html', {'voluntarios': voluntarios})
+
 
 
 def CrearVoluntarioView(request):

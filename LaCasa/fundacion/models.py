@@ -11,6 +11,7 @@ class Voluntario(models.Model):
     comuna = models.CharField(max_length=50)
     email = models.EmailField()
     fecha_incripcion = models.CharField(max_length=15)
+    voluntarios = models.Manager()
     """    
     ocupacion = models.CharField(max_length=50)
     nivel_educacion = models.CharField(max_length=50)
@@ -19,6 +20,6 @@ class Voluntario(models.Model):
     def __str__ (self):       
         return self.nombre
         
-        
+   
 
    

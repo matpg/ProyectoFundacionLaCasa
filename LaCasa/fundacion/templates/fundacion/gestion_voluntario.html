@@ -2,14 +2,23 @@
 {% load static %}
 
 {% block content %}
-
-    <div class="container">
-
-    {% if voluntarios %}
-        {% for voluntario in voluntarios %}
-            
-            
-        {% endfor %}
-    {% endif %}
-    </div>
+<div class="register-photo" style="background-color: rgba(76,24,108,0.72);">
+   
+    <div class="container" style="background-color: white">
+        {% if voluntarios %}
+            {% for voluntario in voluntarios %}
+                <div class="card" style="margin-top: 10px" >
+                    <div class="card-body">
+                        <p class="card-text">{{ voluntario.nombre }}</p>
+                        <p class="card-subtittle; text-muted">{{ voluntario.email }}</p>
+                    </div>
+                    
+                </div>
+                
+                
+            {% endfor %}
+        {% endif %}
+    </div>  
+  
+</div>    
 {% endblock content %}
