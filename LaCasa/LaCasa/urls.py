@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import url
+from django.urls import re_path
+from fundacion.aplicaciones.crearcuentas.views import RegistroUsuario
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('fundacion/', include('fundacion.urls')),
+    #re_path(r'^', include('fundacion.aplicaciones.crearcuentas.urls')),
+    path('registrar', include('aplicaciones.crearcuentas.urls')),
+
 ]
