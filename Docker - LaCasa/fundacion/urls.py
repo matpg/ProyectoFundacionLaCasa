@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^crearV/$', views.CrearVoluntarioView, name="crearVoluntarios"),
     url(r'^GestionarV/$', views.GestionarVoluntario, name="GestionarVoluntarios"),
     path('accounts/', include('django.contrib.auth.urls')),
+    url(r'^cuentasV/$', views.register, name="register"),
 ]  
