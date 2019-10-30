@@ -1,16 +1,16 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_list_or_404
 from .models import Voluntario
-from .forms import VoluntarioForm
+from .forms import VoluntarioForm, SignUpForm
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import authenticate, login
 import re 
 from .funciones import CalcularEdadVoluntario
 from datetime import datetime
-from django.shortcuts import get_list_or_404
 from django.contrib.auth.forms import UserCreationForm
 
-# Create your views here.
+def index(request):
+    return render(request,'fundacion/index.html')
 
 class HomePageView(TemplateView):
     def get(self, request, **kwards):
@@ -58,7 +58,7 @@ def CrearVoluntarioView(request):
 
 def register(request):
     if request.method == "POST":
-        form = UserCreationForm(request.POST)
+        form = SignUpForm(request.POST)
         if form.is_valid():
             user = form.save()
             username = form.cleaned_data.get('username')
@@ -75,7 +75,7 @@ def register(request):
                           template_name = "cuentas/register.html",
                           context={"form":form})
     else:
-        form = UserCreationForm()
+        form = SignUpForm()
         return render(request = request,
                       template_name = "cuentas/register.html",
                       context={"form":form})    

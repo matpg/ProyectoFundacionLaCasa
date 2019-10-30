@@ -18,7 +18,11 @@ class Voluntario(models.Model):
     """
     def __str__ (self):       
         return self.nombre
-        
-   
 
-   
+class Usuario(models.Model):
+    nombre = models.CharField(max_length=50)
+    apellidos = models.CharField(max_length=50)
+    email = models.EmailField()
+    def __str__ (self):       
+        return self.nombre
+        

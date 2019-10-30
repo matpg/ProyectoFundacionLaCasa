@@ -5,6 +5,7 @@ services:
     image: nouchka/sqlite3
   web:
     build: .
+    command: python3 manage.py migrate
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code

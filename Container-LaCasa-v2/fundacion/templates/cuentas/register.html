@@ -1,21 +1,30 @@
 {% extends 'fundacion/base.html' %}
+{% load static %}
 
 {% block content %}
-  <h2>Sign up</h2>
-  <form method="post">
-    {% csrf_token %}
-    {% for field in form %}
-      <p>
-        {{ field.label_tag }}<br>
-        {{ field }}
-        {% if field.help_text %}
-          <small style="color: grey">{{ field.help_text }}</small>
-        {% endif %}
-        {% for error in field.errors %}
-          <p style="color: red">{{ error }}</p>
-        {% endfor %}
-      </p>
-    {% endfor %}
-    <button type="submit">Sign up</button>
-  </form>
+	<div>
+		{% if user.is_authenticated %}
+			<h2>Registro de Usuario</h2>
+			  <form method="post">
+			    {% csrf_token %}
+			    {% for field in form %}
+			      <p>
+			        {{ field.label_tag }}<br>
+			        {{ field }}
+			        {% if field.help_text %}
+			          <small style="color: grey">{{ field.help_text }}</small>
+			        {% endif %}
+			        {% for error in field.errors %}
+			          <p style="color: red">{{ error }}</p>
+			        {% endfor %}
+			      </p>
+			    {% endfor %}
+			    <button type="submit">Sign up</button>
+			  </form>
+		{% else %}
+	        <h2 class="text-center"><strong>No esta autorizado primero debe iniciar sesion</strong></h2>
+	        <a class="text-center nav-link" href="{% url 'login' %}">Iniciar Sesion</a>
+        {% endif %}	
+	</div>
+  
 {% endblock %}
