@@ -7,6 +7,8 @@ from django.contrib.auth import authenticate, login
 import re 
 from .funciones import CalcularEdadVoluntario
 from datetime import datetime
+from django.contrib.auth.forms import UserCreationForm
+
 
 # Create your views here.
 
@@ -49,3 +51,25 @@ def CrearVoluntarioView(request):
             return render(request,'fundacion/crea_exito.html', context=None)
         else:
             return render(request,'fundacion/crea_error.html', context=None)
+
+def register(request):
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            username = form.cleaned_data.get('username')
+            login(request, user)
+            #return redirect("main:homepage")
+
+        else:
+            for msg in form.error_messages:
+                print(form.error_messages[msg])
+
+            return render(request = request,
+                          template_name = "cuentas/register.html",
+                          context={"form":form})
+
+    form = UserCreationForm
+    return render(request = request,
+                  template_name = "cuentas/register.html",
+                  context={"form":form})
