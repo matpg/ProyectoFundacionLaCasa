@@ -1,4 +1,4 @@
-{% extends "fundacion/base.html" %}
+{% extends 'fundacion/base.html' %}
 
 {% block content %}
 <body>
@@ -14,8 +14,10 @@
                 {% else %}
                     <p class="text-center">Para ingresar al sistema por favor inicie Sesion</p>
                     <a class="text-center nav-link" href="{% url 'login' %}">Iniciar Sesion</a>
+                    <a class="text-center nav-link" href="{% url 'login' %}">Ir al sitio de administrador</a>
                 {% endif %}
             </div>
+
         </div>
     </div>
 </body>
