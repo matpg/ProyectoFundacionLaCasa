@@ -25,4 +25,17 @@ class Usuario(models.Model):
     email = models.EmailField()
     def __str__ (self):       
         return self.nombre
+
+class Proyecto(models.Model):
+    id_proyecto = models.CharField(max_length=10, primary_key=True)
+    nombre = models.CharField(max_length=100)
+    descripcion = models.TextField(max_length=200)
+    jefe = models.CharField(max_length=50)
+    fecha_inicio = models.CharField(max_length=20)
+    fecha_termino = models.CharField(max_length=20)
+    cantidad_voluntarios = models.IntegerField()
+    presupuesto = models.CharField(max_length=20)
+
+
+
         

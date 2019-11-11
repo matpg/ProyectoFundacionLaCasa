@@ -17,8 +17,18 @@ class SignUpForm(UserCreationForm):
     Nombre = forms.CharField(max_length=30, required=False, help_text='Obligatorio',)
     Apellido = forms.CharField(max_length=30, required=False, help_text='Obligatorio')
     email = forms.EmailField(max_length=254, help_text='Obligatorio')
-    Usuario = forms.EmailField(max_length=254, help_text='Obligatorio')
+    Usuario = forms.CharField(max_length=254, help_text='Obligatorio')
 
     class Meta:
         model = User
         fields = ('Usuario', 'Nombre', 'Apellido', 'email', 'password1', 'password2', 'is_active', 'is_superuser' )
+
+
+class ProyectoForm(forms.Form):
+    nombre = forms.CharField(max_length=100)
+    descripcion = forms.CharField(widget=forms.Textarea)
+    jefe = forms.CharField(max_length=50)
+    fecha_inicio = forms.CharField(max_length=20)
+    fecha_termino = forms.CharField(max_length=20)
+    cantidad_voluntarios = forms.IntegerField()
+    presupuesto = forms.CharField(max_length=20)
