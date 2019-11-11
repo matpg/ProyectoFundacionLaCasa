@@ -14,10 +14,11 @@ class VoluntarioForm(forms.Form):
 
 
 class SignUpForm(UserCreationForm):
-    first_name = forms.CharField(max_length=30, required=False, help_text='Obligatorio.')
-    last_name = forms.CharField(max_length=30, required=False, help_text='Obligatorio')
+    Nombre = forms.CharField(max_length=30, required=False, help_text='Obligatorio',)
+    Apellido = forms.CharField(max_length=30, required=False, help_text='Obligatorio')
     email = forms.EmailField(max_length=254, help_text='Obligatorio')
+    Usuario = forms.EmailField(max_length=254, help_text='Obligatorio')
 
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
+        fields = ('Usuario', 'Nombre', 'Apellido', 'email', 'password1', 'password2', 'is_active', 'is_superuser' )
