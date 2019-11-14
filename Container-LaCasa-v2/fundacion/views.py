@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_list_or_404
 from .models import Voluntario
-from .forms import VoluntarioForm, SignUpForm
+from .forms import VoluntarioForm, SignUpForm, ProyectoForm
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import authenticate, login
@@ -26,7 +26,7 @@ def GestionarVoluntarios(request):
     print(voluntarios)
     return render(request, 'fundacion/gestion_voluntario.html', {'voluntarios': voluntarios})
 
-
+##########################Registro de Voluntarios###############################################
 
 def CrearVoluntarioView(request):
     if request.method == 'POST':
@@ -56,6 +56,9 @@ def CrearVoluntarioView(request):
             return render(request,'fundacion/crea_error.html', context=None)
     return render(request, 'fundacion/crear.html', context=None)
 
+
+##########################Creacion de Cuentas de usuario###############################################
+
 def register(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
@@ -64,7 +67,6 @@ def register(request):
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             #user = authenticate(username=username, password=raw_password)
-            #login(request, user)
             return redirect("register")
 
         else:
@@ -79,3 +81,48 @@ def register(request):
         return render(request = request,
                       template_name = "cuentas/register.html",
                       context={"form":form})    
+
+
+###################################Creación de Proyectos###############################################
+
+def CreaProyecto(request):
+    if request.method == "POST":
+        form = ProyectoForm(request.POST)
+        if form.is_valid():
+            form_data = form.cleaned_data
+            print(form_data)
+            id_proyecto = form.data.get("id_proyecto")
+            nombre = form_data.get("nombre")
+            descripcion = form_data.get("descripcion")
+            logo = form_data.get("logo")
+            jefe = form_data.get("jefe")
+            fecha_inicio = form_data.get("fecha_inicio")
+            fecha_termino = form_data.get("fecha_termino")
+            cantidad_voluntarios = form_data.get("cantidad_voluntarios")
+            presupuesto = form_data.get("presupuesto")
+            obj = Proyecto()
+            obj.id_proyecto = id_proyecto
+            obj.nombre = nombre
+            obj.descricion = descripcion
+            obj.logo = logo
+            obj.jefe = jefe
+            obj.fecha.inicio = fecha_inicio
+            obj.fecha_termino = fecha_termino
+            obj.cantidad_voluntarios = cantidad_voluntarios
+            obj.presupuesto = presupuesto
+            obj.save()
+
+            return render(request,'proyectos/crea_exito.html', context=None)
+        else:
+            #for msg in form.error_messages:
+             #   print(form.error_messages[msg])
+
+            return render(request = request,
+                          template_name = "proyectos/crea_proyecto.html",
+                          context={"form":form})
+    else:
+        form = ProyectoForm()
+        return render(request = request,
+                      template_name = "proyectos/crea_proyecto.html",
+                      context={"form":form})    
+

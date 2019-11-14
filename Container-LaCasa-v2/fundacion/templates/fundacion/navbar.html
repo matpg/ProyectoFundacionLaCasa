@@ -8,15 +8,25 @@
                     <ul class="nav navbar-nav mr-auto">
 
                         {% if user.is_authenticated %}
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'crearVoluntarios' %}">Registar Voluntario</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'GestionVoluntarios' %}">Gestion de Voluntarios</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Gestion de Proyectos</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Voluntarios</a>
+                                <ul class="submenu">
+                                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'crearVoluntarios' %}">Registro de Voluntarios</a>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'GestionVoluntarios' %}">Gestión de Voluntarios</a>
+                                
+                                </ul>
+                            
+                            </li>
+
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'crearProyectos' %}">Gestion de Proyectos</a></li>
+                        
                         {% else %}
 
                         {% endif %}
 
                         {% if user.is_superuser %}
-                             <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'register' %}">Cuentas de Usuario</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'register' %}">Cuentas de Usuario</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'admin:index' %}">Administrador</a></li>
+
                         {% endif %}  
                     </ul>
                     {% if user.is_authenticated %}
@@ -29,5 +39,36 @@
             </div>
         </nav>
     <div></div>
+
+    <style type="text/css">
+
+        ul, ol {
+            list-style:none;
+        }
+
+        .nav li ul {
+            background-color:rgb(247,247,247);
+            clor:#fff;
+            text-decoration:none;
+            padding:5px 5px;
+            display:block;
+        }
+        
+        .nav li:hover {
+            background-color:#D7D7D7;
+        }
+
+        .nav li ul {
+            display:none;
+            position: absolute;
+            min-width:200px;
+            font-family: 'Open sans';
+        }
+
+        .nav li:hover > ul {
+            display:block;
+        } 
+
+    </style>
 </div>
 
