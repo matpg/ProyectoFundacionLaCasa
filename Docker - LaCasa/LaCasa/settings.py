@@ -30,11 +30,9 @@ ALLOWED_HOSTS = [
 	'*'
 ]
 
-<<<<<<< HEAD
 # Application definition tio maty no se meta aqui
-=======
+
 # Application definition
->>>>>>> febfaa839fc2199a90072ff2ee1a10aaa4b2d5fb
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -44,15 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fundacion.apps.FundacionConfig',
-<<<<<<< HEAD
 ]
 
-
-=======
-    'reset_migrations',
-
-]
->>>>>>> febfaa839fc2199a90072ff2ee1a10aaa4b2d5fb
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

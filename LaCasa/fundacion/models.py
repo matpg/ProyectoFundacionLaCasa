@@ -1,6 +1,5 @@
 from django.db import models
 import time
-# Create your models here.
 
 class Voluntario(models.Model):
     nombre = models.CharField(max_length=50)
