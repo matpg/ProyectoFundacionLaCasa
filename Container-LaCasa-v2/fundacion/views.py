@@ -89,12 +89,30 @@ def CreaProyecto(request):
     if request.method == "POST":
         form = ProyectoForm(request.POST)
         if form.is_valid():
-            #user = form.save()
-            #username = form.cleaned_data.get('username')
-            #raw_password = form.cleaned_data.get('password1')
+            form_data = form.cleaned_data
+            print(form_data)
+            id_proyecto = form.data.get("id_proyecto")
+            nombre = form_data.get("nombre")
+            descripcion = form_data.get("descripcion")
+            logo = form_data.get("logo")
+            jefe = form_data.get("jefe")
+            fecha_inicio = form_data.get("fecha_inicio")
+            fecha_termino = form_data.get("fecha_termino")
+            cantidad_voluntarios = form_data.get("cantidad_voluntarios")
+            presupuesto = form_data.get("presupuesto")
+            obj = Proyecto()
+            obj.id_proyecto = id_proyecto
+            obj.nombre = nombre
+            obj.descricion = descripcion
+            obj.logo = logo
+            obj.jefe = jefe
+            obj.fecha.inicio = fecha_inicio
+            obj.fecha_termino = fecha_termino
+            obj.cantidad_voluntarios = cantidad_voluntarios
+            obj.presupuesto = presupuesto
+            obj.save()
 
-            return redirect("crearProyectos")
-
+            return render(request,'proyectos/crea_exito.html', context=None)
         else:
             #for msg in form.error_messages:
              #   print(form.error_messages[msg])
