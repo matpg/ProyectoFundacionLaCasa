@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_list_or_404
-from .models import Voluntario
+from .models import Voluntario, Proyecto
 from .forms import VoluntarioForm, SignUpForm, ProyectoForm
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -106,7 +106,7 @@ def CreaProyecto(request):
             obj.descricion = descripcion
             obj.logo = logo
             obj.jefe = jefe
-            obj.fecha.inicio = fecha_inicio
+            obj.fecha_inicio = fecha_inicio
             obj.fecha_termino = fecha_termino
             obj.cantidad_voluntarios = cantidad_voluntarios
             obj.presupuesto = presupuesto

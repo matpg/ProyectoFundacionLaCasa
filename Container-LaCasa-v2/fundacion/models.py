@@ -34,7 +34,7 @@ class Proyecto(models.Model):
     jefe = models.CharField(max_length=50)
     fecha_inicio = models.CharField(max_length=20)
     fecha_termino = models.CharField(max_length=20)
-    cantidad_voluntarios = models.IntegerField()
+    cantidad_voluntarios = models.IntegerField(blank=True)
     presupuesto = models.CharField(max_length=20)
     proyectos = models.Manager()
     def __str__(self):
