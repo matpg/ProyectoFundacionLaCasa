@@ -25,10 +25,17 @@ class SignUpForm(UserCreationForm):
 
 
 class ProyectoForm(forms.Form):
+    id_proyecto = forms.CharField(max_length=10)
     nombre = forms.CharField(max_length=100)
     descripcion = forms.CharField(widget=forms.Textarea)
+    logo = forms.FileField(required=False)
     jefe = forms.CharField(max_length=50)
     fecha_inicio = forms.CharField(max_length=20)
     fecha_termino = forms.CharField(max_length=20)
     cantidad_voluntarios = forms.IntegerField()
-    presupuesto = forms.CharField(max_length=20)
+    presupuesto = forms.CharField(max_length=20)        
+    
+    class Meta:
+        fields = ('id_proyecto', 'nombre', 'descipcion', 'logo', 'jefe', 'fecha_inicio', 'fecha_termino', 'cantidad_voluntarios','presupuesto' )
+
+    
