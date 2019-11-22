@@ -1,0 +1,7 @@
+{% for proyecto in Proyectos.proyectos.all() %}
+    <p>{{ proyecto.name }}</p>
+{% endfor %}
+
+{% ffor proyecto in Proyectos.proyectos.all() %}
+    <p>El titulo es : {{ proyecto.name }}</p>
+{% endfor %}
