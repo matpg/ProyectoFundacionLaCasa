@@ -6,11 +6,13 @@ class Voluntario(models.Model):
     rut = models.CharField(max_length=11, primary_key=True)
     fecha = models.CharField(max_length=50)
     edad = models.CharField(max_length=50)
+    proyecto_actividad = models.CharField(max_length=50)
     celular = models.CharField(max_length=50)
     comuna = models.CharField(max_length=50)
     email = models.EmailField()
     fecha_incripcion = models.CharField(max_length=15)
     voluntarios = models.Manager()
+    
     """    
     ocupacion = models.CharField(max_length=50)
     nivel_educacion = models.CharField(max_length=50)

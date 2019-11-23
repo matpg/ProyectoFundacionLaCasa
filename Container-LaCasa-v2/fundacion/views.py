@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import authenticate, login
 import re 
-from .funciones import CalcularEdadVoluntario
+from .funciones import CalcularEdadVoluntario, pkgen
 from datetime import datetime
 from django.contrib.auth.forms import UserCreationForm
 
@@ -37,6 +37,7 @@ def CrearVoluntarioView(request):
             em = form_data.get("email")
             rut = form_data.get("rut")
             fecha = form_data.get("fecha")
+            proyecto_actividad = form_data.get("proyecto_actividad")
             celu = form_data.get("celular")
             comuna = form_data.get("comuna")
             obj = Voluntario()
@@ -44,6 +45,7 @@ def CrearVoluntarioView(request):
             obj.email = em
             obj.rut = rut
             obj.fecha = fecha
+            obj.proyecto_actividad = proyecto_actividad
             obj.edad = CalcularEdadVoluntario(fecha)
             obj.fecha_incripcion = datetime.now().date()
             if re.match('\d',obj.celular):

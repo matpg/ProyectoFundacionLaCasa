@@ -16,7 +16,16 @@
                 <div class="form-group"><input class="form-control" type="text" name="rut" placeholder="" style="background-color: rgb(255,255,255);"></div>
                 <a>Fecha de nacimiento</a>
                 <div class="form-group"><input class="form-control" type="date" name="fecha"></div>
-                
+                <a>Proyecto o Actividad</a>
+
+                <div class="form-group">
+                    <select class="form.control" name="proyecto_actividad">
+                        {% for proyecto in proyectos %}
+                            <option value="1">{{ proyecto.nombre }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
                 <a>Celular</a>
                 <div class="form-group"><input class="form-control" type="tel" name="celular" placeholder="Ejemplo: 912345678" style="background-color: rgb(255,255,255);"></div>
                 <a>Comuna</a>
