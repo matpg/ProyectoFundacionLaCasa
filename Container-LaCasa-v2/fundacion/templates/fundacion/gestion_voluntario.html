@@ -2,9 +2,9 @@
 {% load static %}
 
 {% block content %}
-<div class="register-photo" style="background-color: rgba(76,24,108,0.72);">
-   
-    <div class="container" style="background-color: white">
+<div class="register-photo" style="background-color: transparent;">
+
+    <div class="container" style="background-color: transparent;">
         {% if user.is_authenticated %}
             {% if voluntarios %}
                 {% for voluntario in voluntarios %}
@@ -20,8 +20,8 @@
         {% else %}
             <p class="text-center">Para ingresar al sistema por favor inicie Sesion</p>
             <a class="text-center nav-link" href="{% url 'login' %}">Iniciar Sesion</a>
-        {% endif %}    
-    </div>  
-  
-</div>    
+        {% endif %}
+    </div>
+
+</div>
 {% endblock content %}
