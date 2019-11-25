@@ -20,7 +20,7 @@
 
                     <select class="form.control" name="proyecto_actividad">
                         {% for proyecto in proyectos %}
-                            <option value="1">{{ proyecto.nombre }}</option>
+                            <option value={{ proyecto.id_proyecto }}>{{ proyecto.nombre }}</option>
                         {% endfor %}
                     </select>  
                     

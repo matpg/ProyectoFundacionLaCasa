@@ -17,14 +17,28 @@
                             
                             </li>
 
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'crearProyectos' %}">Gestion de Proyectos</a></li>
+                           <li class="nav-item" role="presentation"><a class="nav-link" href="#">Proyectos</a>
+                                <ul class="submenu">
+                                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'crearProyectos' %}">Crear Proyecto</a>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'GestionProyectos' %}">Gestionar Proyecto</a>
+                                
+                                </ul>
+                            
+                            </li>
                         
                         {% else %}
 
                         {% endif %}
 
                         {% if user.is_superuser %}
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'register' %}">Cuentas de Usuario</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Cuentas</a>
+                                <ul class="submenu">
+                                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'register' %}">Crear Cuenta</a>
+                                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'GestionCuentas' %}">Gestiónar Cuenta</a>
+                                
+                                </ul>
+                            
+                            </li>
                             <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'admin:index' %}">Administrador</a></li>
 
                         {% endif %}  
