@@ -97,7 +97,7 @@ def CreaProyecto(request):
         form = ProyectoForm(request.POST)
         if form.is_valid():
             form_data = form.cleaned_data
-            id_proyecto = form.data.get("id_proyecto")
+            #id_proyecto = form.data.get("id_proyecto")
             nombre = form_data.get("nombre")
             descripcion = form_data.get("descripcion")
             logo = form_data.get("logo")
@@ -107,7 +107,7 @@ def CreaProyecto(request):
             cantidad_voluntarios = form_data.get("cantidad_voluntarios")
             presupuesto = form_data.get("presupuesto")
             obj = Proyecto()
-            obj.id_proyecto = id_proyecto
+            #obj.id_proyecto = id_proyecto
             obj.nombre = nombre
             obj.descricion = descripcion
             obj.logo = logo

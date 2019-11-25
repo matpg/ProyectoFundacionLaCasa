@@ -27,7 +27,7 @@ class SignUpForm(UserCreationForm):
 
 
 class ProyectoForm(forms.Form):
-    id_proyecto = forms.CharField(max_length=6)
+    #id_proyecto = forms.CharField(max_length=6)
     nombre = forms.CharField(max_length=100)
     descripcion = forms.CharField(widget=forms.Textarea)
     logo = forms.FileField(required=False)

@@ -29,7 +29,7 @@ class Usuario(models.Model):
         return self.nombre
 
 class Proyecto(models.Model):
-    id_proyecto = models.CharField(max_length=10, primary_key=True)
+    id_proyecto = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=200)
     logo = models.FileField(default='SOME STRING')
