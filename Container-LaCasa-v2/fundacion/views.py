@@ -51,11 +51,12 @@ def CrearVoluntarioView(request):
             obj.fecha_incripcion = datetime.now().date()
             if re.match('\d',obj.celular):
                 return render(request,'fundacion/crea_error.html', context=None)
+                print("hola")
             obj.celular = celu
             obj.comuna = comuna
             obj.save()
             return render(request,'fundacion/crea_exito.html', context=None)
-        else:
+        else:     
             return render(request,'fundacion/crea_error.html', context=None)
         
     proyectos = get_list_or_404(Proyecto)

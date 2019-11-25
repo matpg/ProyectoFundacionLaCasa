@@ -2,9 +2,10 @@
 {% load static %}
 
 {% block content %}
-    <div class="register-photo" style="background-color: rgba(76,24,108,0.72);">
+
+    <div class="register-photo" style="background-color: transparent;">
         <div class="form-container">
-            
+
             {% if user.is_authenticated %}
                 <form method="POST" style="background-color: rgb(247,247,247);">
                     {% csrf_token %}
