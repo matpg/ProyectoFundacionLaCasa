@@ -5,7 +5,7 @@ from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import authenticate, login
 import re 
-from .funciones import CalcularEdadVoluntario
+from .funciones import CalcularEdadVoluntario, pkgen
 from datetime import datetime
 from django.contrib.auth.forms import UserCreationForm
 
@@ -26,6 +26,7 @@ def GestionarVoluntarios(request):
     print(voluntarios)
     return render(request, 'fundacion/gestion_voluntario.html', {'voluntarios': voluntarios})
 
+
 ##########################Registro de Voluntarios###############################################
 
 def CrearVoluntarioView(request):
@@ -37,6 +38,7 @@ def CrearVoluntarioView(request):
             em = form_data.get("email")
             rut = form_data.get("rut")
             fecha = form_data.get("fecha")
+            proyecto_actividad = form_data.get("proyecto_actividad")
             celu = form_data.get("celular")
             comuna = form_data.get("comuna")
             obj = Voluntario()
@@ -44,17 +46,22 @@ def CrearVoluntarioView(request):
             obj.email = em
             obj.rut = rut
             obj.fecha = fecha
+            obj.proyecto_actividad = proyecto_actividad
             obj.edad = CalcularEdadVoluntario(fecha)
             obj.fecha_incripcion = datetime.now().date()
             if re.match('\d',obj.celular):
                 return render(request,'fundacion/crea_error.html', context=None)
+                print("hola")
             obj.celular = celu
             obj.comuna = comuna
             obj.save()
             return render(request,'fundacion/crea_exito.html', context=None)
-        else:
+        else:     
             return render(request,'fundacion/crea_error.html', context=None)
-    return render(request, 'fundacion/crear.html', context=None)
+        
+    proyectos = get_list_or_404(Proyecto)
+    print(Proyecto)
+    return render(request, 'fundacion/crear.html', {'proyectos': proyectos})
 
 
 ##########################Creacion de Cuentas de usuario###############################################
@@ -90,8 +97,7 @@ def CreaProyecto(request):
         form = ProyectoForm(request.POST)
         if form.is_valid():
             form_data = form.cleaned_data
-            print(form_data)
-            id_proyecto = form.data.get("id_proyecto")
+            #id_proyecto = form.data.get("id_proyecto")
             nombre = form_data.get("nombre")
             descripcion = form_data.get("descripcion")
             logo = form_data.get("logo")
@@ -101,7 +107,7 @@ def CreaProyecto(request):
             cantidad_voluntarios = form_data.get("cantidad_voluntarios")
             presupuesto = form_data.get("presupuesto")
             obj = Proyecto()
-            obj.id_proyecto = id_proyecto
+            #obj.id_proyecto = id_proyecto
             obj.nombre = nombre
             obj.descricion = descripcion
             obj.logo = logo
