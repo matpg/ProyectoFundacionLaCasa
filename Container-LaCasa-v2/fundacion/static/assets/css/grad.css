@@ -1,0 +1,9 @@
+body {
+  background: rgb(89,0,84);
+  background: linear-gradient(180deg, rgba(89,0,84,1) 0%, rgba(60,0,129,0.9360119047619048) 76%, rgba(3,8,157,0.8491771708683473) 100%);
+}
+
+#gradcard {
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,220,220,0.9360119047619048) 95%, rgba(207,203,203,0.8491771708683473) 100%);
+}

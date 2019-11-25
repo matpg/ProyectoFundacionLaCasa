@@ -10,7 +10,8 @@
         <link rel="stylesheet" href="{% static 'assets/css/Footer-Clean.css'%}">
         <link rel="stylesheet" href="{% static 'assets/css/Navigation-with-Button.css'%}">
         <link rel="stylesheet" href="{% static 'assets/css/Registration-Form-with-Photo.css'%}">
-        <link rel="stylesheet" href="{% static 'assets/css/styles.css'%}">
+        <link rel="stylesheet" href="{% static 'assets/css/grad.css'%}">
+        <link rel="stylesheet" href=""
         {% block head %}
         {% endblock head %}
     </head>
@@ -25,6 +26,18 @@
         <script src="{% static 'assets/js/jquery.min.js' %}"></script>
         <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
         {% block scripts %}
+        <script>
+              function validacion(rut){
+                  //rut = document.getElementById("rut_field").value;
+                  if(!(/^\d{7,8}-\d|[k,K]/.test(rut.value))){
+                    if(!rut.value == ""){
+                      alert("Ingrese el rut con el formato correcto");
+                    }
+                  }
+              }
+        </script>
+
         {% endblock scripts %}
+
     </body>
 </html>
