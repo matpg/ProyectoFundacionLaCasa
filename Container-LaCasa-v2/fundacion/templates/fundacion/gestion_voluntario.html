@@ -9,15 +9,15 @@
             <p class="card-text">{{ user.cuentas.id_proyecto }}</p>
             {% if voluntarios %}
                 {% for voluntario in voluntarios %}
-                    {% if voluntario.proyecto_actividad == cuentas.id_proyecto%}
-                        <div class="card" style="margin-top: 10px" >
-                            <div class="card-body">
-                                <p class="card-text">{{ voluntario.nombre }}</p>
-                                <p class="text-muted">Rut: {{ voluntario.rut }}</p>
-                                <p class="card-subtittle; text-muted">Edad: {{ voluntario.edad }}</p>
-                            </div>
-                        </div>
-                    {% endif %}
+
+                      <div class="card" style="margin-top: 10px" >
+                          <div class="card-body">
+                              <p class="card-text">{{ voluntario.nombre }}</p>
+                              <p class="text-muted">Rut: {{ voluntario.rut }}</p>
+                              <p class="card-subtittle; text-muted">Edad: {{ voluntario.edad }}</p>
+                          </div>
+                      </div>
+
                 {% endfor %}
             {% endif %}
         {% else %}

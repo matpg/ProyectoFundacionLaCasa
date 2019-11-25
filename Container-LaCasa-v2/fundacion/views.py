@@ -4,7 +4,7 @@ from .forms import VoluntarioForm, SignUpForm, ProyectoForm
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import authenticate, login
-import re 
+import re
 from .funciones import CalcularEdadVoluntario, pkgen
 from datetime import datetime
 from django.contrib.auth.forms import UserCreationForm
@@ -24,7 +24,6 @@ class Exito_vista(TemplateView):
 def GestionarVoluntarios(request):
     voluntarios = get_list_or_404(Voluntario)
     cuentas = get_list_or_404(Usuario)
-    print(voluntarios)
     return render(request, 'fundacion/gestion_voluntario.html', {'voluntarios': voluntarios}, {'cuentas': cuentas})
 
 def GestionarProyectos(request):
@@ -67,9 +66,9 @@ def CrearVoluntarioView(request):
             obj.comuna = comuna
             obj.save()
             return render(request,'fundacion/crea_exito.html', context=None)
-        else:     
+        else:
             return render(request,'fundacion/crea_error.html', context=None)
-        
+
     proyectos = get_list_or_404(Proyecto)
     print(Proyecto)
     return render(request, 'fundacion/crear.html', {'proyectos': proyectos})
@@ -100,7 +99,7 @@ def register(request):
         form = SignUpForm()
         return render(request = request,
                       template_name = "cuentas/register.html",
-                      context={"form":form})    
+                      context={"form":form})
 
 
 ###################################Creación de Proyectos###############################################
@@ -143,5 +142,4 @@ def CreaProyecto(request):
         form = ProyectoForm()
         return render(request = request,
                       template_name = "proyectos/crea_proyecto.html",
-                      context={"form":form})    
-
+                      context={"form":form})

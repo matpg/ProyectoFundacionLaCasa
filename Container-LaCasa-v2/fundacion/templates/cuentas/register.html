@@ -2,9 +2,9 @@
 {% load static %}
 
 {% block content %}
-	<div class="register-photo" style="background-color: rgba(76,24,108,0.72);">
+	<div class="register-photo" style="background-color: transparent;">
         <div class="form-container">
-			
+
 			{% if user.is_authenticated %}
 
 				{% if user.is_superuser %}
@@ -12,12 +12,12 @@
 						<h2>Registro de Usuario</h2>
 						<form method="post">
 							{% csrf_token %}
-							
+
 							{% for field in form %}
 								<p>
 									{{ field.label_tag }}<br>
 									{{ field }}
-									
+
 									{% if field.help_text %}
 										<small style="color: grey">{{ field.help_text }}</small>
 									{% endif %}
@@ -26,7 +26,7 @@
 										<p style="color: red">{{ error }}</p>
 									{% endfor %}
 								</p>
-							{% endfor %}						
+							{% endfor %}
 							<button class="btn btn-primary btn-block" type="submit" style="background-color: rgb(71,151,244);">Registrar usuario</button></div>
 						</form>
 					</form>
@@ -35,12 +35,12 @@
 					<h2 class="text-center"><strong>No esta autorizado para crear cuentas de usuario, debes tener permisos de administrador</strong></h2>
 				{% endif %}
 
-			{% else %}		
+			{% else %}
 				<h2 class="text-center"><strong>Debes iniciar sesión de administrador</strong></h2>
 				<a class="text-center nav-link" href="{% url 'login' %}">Iniciar Sesion</a>
-			{% endif%}	
-		
+			{% endif%}
+
 		</div>
 	</div>
-  
+
 {% endblock %}
