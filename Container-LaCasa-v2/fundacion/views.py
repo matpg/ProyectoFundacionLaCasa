@@ -26,6 +26,7 @@ def GestionarVoluntarios(request):
     print(voluntarios)
     return render(request, 'fundacion/gestion_voluntario.html', {'voluntarios': voluntarios})
 
+
 ##########################Registro de Voluntarios###############################################
 
 def CrearVoluntarioView(request):
@@ -56,7 +57,10 @@ def CrearVoluntarioView(request):
             return render(request,'fundacion/crea_exito.html', context=None)
         else:
             return render(request,'fundacion/crea_error.html', context=None)
-    return render(request, 'fundacion/crear.html', context=None)
+        
+    proyectos = get_list_or_404(Proyecto)
+    print(Proyecto)
+    return render(request, 'fundacion/crear.html', {'proyectos': proyectos})
 
 
 ##########################Creacion de Cuentas de usuario###############################################
@@ -92,7 +96,6 @@ def CreaProyecto(request):
         form = ProyectoForm(request.POST)
         if form.is_valid():
             form_data = form.cleaned_data
-            print(form_data)
             id_proyecto = form.data.get("id_proyecto")
             nombre = form_data.get("nombre")
             descripcion = form_data.get("descripcion")

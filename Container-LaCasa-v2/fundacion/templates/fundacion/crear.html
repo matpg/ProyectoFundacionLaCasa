@@ -1,4 +1,3 @@
-
 {% extends "fundacion/base.html" %}
 {% load static %}
 
@@ -7,34 +6,34 @@
         <div class="form-container">
             
             {% if user.is_authenticated %}
-            <form method="POST" style="background-color: rgb(247,247,247);">
-                {% csrf_token %}
-                <h2 class="text-center"><strong>Registrar Voluntario</strong></h2>
-                <a>Nombre y Apellido</a>
-                <div class="form-group"><input class="form-control" type="text" name="nombre" placeholder="" style="background-color: rgb(255,255,255);"></div>
-                <a>Rut</a>
-                <div class="form-group"><input class="form-control" type="text" name="rut" placeholder="" style="background-color: rgb(255,255,255);"></div>
-                <a>Fecha de nacimiento</a>
-                <div class="form-group"><input class="form-control" type="date" name="fecha"></div>
-                <a>Proyecto o Actividad</a>
+                <form method="POST" style="background-color: rgb(247,247,247);">
+                    {% csrf_token %}
+                    <h2 class="text-center"><strong>Registrar Voluntario</strong></h2>
+                    <a>Nombre y Apellido</a>
+                    <div class="form-group"><input class="form-control" type="text" name="nombre" placeholder="" style="background-color: rgb(255,255,255);"></div>
+                    <a>Rut</a>
+                    <div class="form-group"><input class="form-control" type="text" name="rut" placeholder="" style="background-color: rgb(255,255,255);"></div>
+                    <a>Fecha de nacimiento</a>
+                    <div class="form-group"><input class="form-control" type="date" name="fecha"></div>
+                    <a>Proyecto o Actividad</a>
 
-                <div class="form-group">
                     <select class="form.control" name="proyecto_actividad">
                         {% for proyecto in proyectos %}
                             <option value="1">{{ proyecto.nombre }}</option>
                         {% endfor %}
-                    </select>
-                </div>
+                    </select>  
+                    
+                        
+                    <br><br>
+                    <a>Celular</a>
+                    <div class="form-group"><input class="form-control" type="tel" name="celular" placeholder="Ejemplo: 912345678" style="background-color: rgb(255,255,255);"></div>
+                    <a>Comuna</a>
+                    <div class="form-group"><input class="form-control" type="text" name="comuna" placeholder="" style="background-color: rgb(255,255,255);"></div>
+                    <a>Email</a>
+                    <div class="form-group"><input class="form-control" type="email" name="email" placeholder="" style="background-color: rgb(255,255,255);"></div>
 
-                <a>Celular</a>
-                <div class="form-group"><input class="form-control" type="tel" name="celular" placeholder="Ejemplo: 912345678" style="background-color: rgb(255,255,255);"></div>
-                <a>Comuna</a>
-                <div class="form-group"><input class="form-control" type="text" name="comuna" placeholder="" style="background-color: rgb(255,255,255);"></div>
-                <a>Email</a>
-                <div class="form-group"><input class="form-control" type="email" name="email" placeholder="" style="background-color: rgb(255,255,255);"></div>
-
-                <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: rgb(71,151,244);">Registrar</button></div>
-            </form>
+                    <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color: rgb(71,151,244);">Registrar</button></div>
+                </form>
             {% else %}
                 <h2 class="text-center"><strong>No esta autorizado primero debe iniciar sesion</strong></h2>
                 <a class="text-center nav-link" href="{% url 'login' %}">Iniciar Sesion</a>

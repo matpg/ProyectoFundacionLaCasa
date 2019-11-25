@@ -7,14 +7,6 @@
     <div class="container" style="background-color: white">
         {% if user.is_authenticated %}
             {% if voluntarios %}
-            {% comment %}#############PRUEBA DE LISTA PARA ELEGIR##############{% endcomment %}
-                <select class="form.control" name="proyecto_actividad">
-                    {% for voluntario in voluntarios %}
-                        <option value="1">{{ voluntario.nombre }}</option>
-                    {% endfor %}
-                </select>
-            {% comment %}#############PRUEBA DE LISTA PARA ELEGIR##############{% endcomment %}
-
                 {% for voluntario in voluntarios %}
                     <div class="card" style="margin-top: 10px" >
                         <div class="card-body">
