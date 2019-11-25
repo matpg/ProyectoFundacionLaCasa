@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_list_or_404
-from .models import Voluntario, Proyecto
+from .models import Voluntario, Proyecto, Usuario
 from .forms import VoluntarioForm, SignUpForm, ProyectoForm
 from django.views.generic import TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -23,8 +23,19 @@ class Exito_vista(TemplateView):
 
 def GestionarVoluntarios(request):
     voluntarios = get_list_or_404(Voluntario)
+    cuentas = get_list_or_404(Usuario)
     print(voluntarios)
-    return render(request, 'fundacion/gestion_voluntario.html', {'voluntarios': voluntarios})
+    return render(request, 'fundacion/gestion_voluntario.html', {'voluntarios': voluntarios}, {'cuentas': cuentas})
+
+def GestionarProyectos(request):
+    proyectos = get_list_or_404(Proyecto)
+    voluntarios = get_list_or_404(Voluntario)
+    return render(request, 'proyectos/gestion_proyectos.html', {'proyectos': proyectos}, {'voluntarios': voluntarios})
+
+def GestionarCuentas(request):
+    cuentas = get_list_or_404(Usuario)
+    proyectos = get_list_or_404(Proyecto)
+    return render(request, 'cuentas/gestion_cuentas.html', {'cuentas': cuentas}, {'proyectos': proyectos})
 
 
 ##########################Registro de Voluntarios###############################################
@@ -74,6 +85,8 @@ def register(request):
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             #user = authenticate(username=username, password=raw_password)
+            obj= Usuario()
+            obj.save()
             return redirect("register")
 
         else:

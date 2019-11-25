@@ -25,6 +25,7 @@ class Usuario(models.Model):
     nombre = models.CharField(max_length=50)
     apellidos = models.CharField(max_length=50)
     email = models.EmailField()
+    id_proyecto = models.IntegerField(default=0)
     def __str__ (self):       
         return self.nombre
 
