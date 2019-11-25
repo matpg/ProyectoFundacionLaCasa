@@ -126,6 +126,6 @@ def CreaProyecto(request):
                       template_name = "proyectos/crea_proyecto.html",
                       context={"form":form})    
 
-def ListaProyectos(request):
-    proyectos = Proyecto.proyectos.all()
-    return render(request, 'lista_p.html' { 'proyectos': proyectos })
+#def ListaProyectos(request):
+    #proyectos = Proyecto.proyectos.all()
+    #return render(request, 'lista_p.html' { 'proyectos': proyectos })
