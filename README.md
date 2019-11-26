@@ -9,7 +9,7 @@
   
 - Para ejecutar la aplicación en necesario correr el contenedor Docker:
 
-    1.En la cartepeta **Container-LaCasa-v2**
+    1.En la carpeta **Container-LaCasa-v2**
 
     2.Ejecutar en consola:$ docker-compose build
 
